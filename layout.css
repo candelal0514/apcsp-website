@@ -1,0 +1,76 @@
+body {
+  margin:0;
+  background-color:#F4F4F4;
+   /* New York Skyline link */
+}
+
+.bg1 {
+  background:url("https://goo.gl/5Si8F6");/*New York Skyline*/
+}
+
+.bg2 {
+  background:url("https://goo.gl/C1uhmU");/*San Diego Skyline*/
+}
+
+.bg3 {
+  background:url("https://goo.gl/orLavR");/*LA Skyline*/
+}
+
+.bg4 {
+  background:url("https://goo.gl/4awQaB");/*Himalayan Mountains*/
+}
+
+.bg5 {
+  background:url("https://goo.gl/nRuapr");/*Dubai Skyline*/
+}
+
+.fullpageimage {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header ul {
+  list-style-type: none;
+  margin:0;
+  padding-top: 20px;
+  padding-bottom:5%;
+  overflow: hidden;
+  margin-bottom:0;
+}
+.header li{
+  display:inline-block;
+  margin:0;
+}
+.header a {
+  margin:0;
+  padding: 16px 30px 16px 30px;
+  text-decoration:none;
+  font-size:20px;
+  color:white;
+  text-shadow: 1px 1px #777;
+}
+
+.header .active {
+  background-color:rgb(0,0,0);
+  background-color:rgba(0,0,0,0.5);
+}
+
+.header a:hover:not(.active) {
+  background-color:rgb(0,0,0);
+  background-color:rgba(0,0,0,0.5);
+  
+}
+
+.headline{
+  text-align:center;
+  color:white;
+  text-transform:uppercase;
+  font-family: Sans-Serif;
+  font-size:50px;
+  font-weight:bolder;
+  padding-top:5%;
+}
+
+

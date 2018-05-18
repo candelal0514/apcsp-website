@@ -1,7 +1,21 @@
 body {
   margin:0;
   background-color:#F4F4F4;
-   /* New York Skyline link */
+}
+
+#content {
+  margin:auto;
+  width:80%;
+}
+
+#scrollyboy {
+  display:inline-block;
+  animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  0% { left: 0; }
+  100% { left: -100%; }
 }
 
 .bg1 {
@@ -39,10 +53,12 @@ body {
   overflow: hidden;
   margin-bottom:0;
 }
+
 .header li{
   display:inline-block;
   margin:0;
 }
+
 .header a {
   margin:0;
   padding: 16px 30px 16px 30px;

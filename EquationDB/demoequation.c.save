@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+//this program is a demo program for the ideal gas equation, PV=nRT
+
+int P;
+int V;
+int n;
+int R = .0821;
+int t;
+int answer;
+int pos;
+
+int getpos()
+{
+  

@@ -12,23 +12,23 @@ int T;
 int answer;
 char varlist[5] = {'P', 'V', 'n', 'T', '\0'};
 
-int calculator(int var)
+int calculator(int var, int P, int V, int n, int T)
 {
   if (var == 1)
   {
-    answer = (n*R*T)/V;
+    int answer = (n*.0821*T)/V;
   }
   if (var == 2)
   {
-    answer = (n*R*T)/P;
+    int answer = (n*.0821*T)/P;
   }
   if (var == 3)
   {
-    answer = (P*V)/(R*T);
+    int answer = (P*V)/(.0821*T);
   }
   if (var == 4)
   {
-    answer = (P*V)/(n*R);
+    int answer = (P*V)/(n*.0821);
   }
   return answer;
 }
@@ -58,9 +58,9 @@ int stringcomp()
   }
 }
 
-int othervalues(int var)
+int othervalues(int position, int P, int V, int n, int T)
 {
-  if (var == 1)
+  if (position == 1)
   {
     printf("What is your V value?\n");
     scanf("%d", V);
@@ -69,7 +69,7 @@ int othervalues(int var)
     printf("What is your T value?\n");
     scanf("%d", T);
   }
-  if (var == 2)
+  if (position == 2)
   {
     printf("What is your P value?\n");
     scanf("%d", P);
@@ -78,7 +78,7 @@ int othervalues(int var)
     printf("What is your T value?\n");
     scanf("%d", T);
   }
-  if (var == 3)
+  if (position == 3)
   {
     printf("What is your P value?\n");
     scanf("%d", P);
@@ -87,7 +87,7 @@ int othervalues(int var)
     printf("What is your T value?\n");
     scanf("%d", T);
   }
-  if (var == 4)
+  if (position == 4)
   {
     printf("What is your P value?\n");
     scanf("%d", P);

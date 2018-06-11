@@ -23,7 +23,7 @@
       </ul>
     </div>
   </div>
-
+  <h1> PHP Code </h1>
   <p>Numbers given:
 
   <?php
@@ -36,8 +36,9 @@
      $x++;
    } //This while loop prints out all the values that were passed from the form
    ?>
+  <h1>C Code</h1>
   <?php
-   $output = shell_exec("eqDB/eqDB $post[0] $post[1] $post[2] $post[3]");
+   $output = shell_exec("eqDB/eqDB $post[0] $post[1] $post[2] $post[3] $post[4]");
    echo $output;
   ?>
 </body>

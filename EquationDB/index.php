@@ -28,14 +28,14 @@
   Solve for?:
   <select name="solvefordropdown">
   <option value="solveChoose">Choose</option>
-  <option value="solveP">P</option>
-  <option value="solveV">V</option>
-  <option value="solveN">n</option>
-  <option value="solveT">T</option>
+  <option value="P">P</option>
+  <option value="V">V</option>
+  <option value="N">n</option>
+  <option value="T">T</option>
   </select><br>
-  Number 1: <input type="number" name="num1"><br>
-  Number 2: <input type="number" name="num2"><br>
-  text field: <input type="text" name="textin"><br>
+  Known Variable 1: <input type="number" name="num1"><br>
+  Known Variable 2: <input type="number" name="num2"><br>
+  Known Variable 3: <input type="number" name="num3"><br>
   <input type="submit" value="Calculate!">
   </form>
 </body>

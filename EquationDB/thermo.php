@@ -21,22 +21,16 @@
     </div>
   </div>
   <form action="./results.php" method="post">
-  Select an equation:
-  <select name="dropdown1">
-  <option value ="idealgas">PV = nRT</option>
+  <select hidden name="dropdown1">
+  <option value ="thermo">PV = nRT</option>
   </select><br>
-  Submit P in atmospheres, V in Liters, n in moles, & T in Kelvins<br>
-  Solve for?:
-  <select name="solvefordropdown">
-  <option value="solveChoose">Choose</option>
-  <option value="P">P</option>
-  <option value="V">V</option>
-  <option value="N">n</option>
-  <option value="T">T</option>
+  Submit Q as heat transferred in Joules, m as mass in grams, c as specific heat capacity of the liquid in Joules per gram degrees Celcius, and ΔT as temperature change in celcius.<br>
   </select><br>
-  Known Variable 1: <input type="number" step="any" name="num1"><br>
-  Known Variable 2: <input type="number" step="any" name="num2"><br>
-  Known Variable 3: <input type="number" step="any" name="num3"><br>
+  Leave the unkown variable blank!<br>
+  Q : <input type="number" step="any" name="num1"><br>
+  M : <input type="number" step="any" name="num2"><br>
+  C : <input type="number" step="any" name="num3"><br>
+  ΔT: <input tpye="number" step="any" name="num4"><br>
   <input type="submit" value="Calculate!">
   </form>
 </body>

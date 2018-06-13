@@ -23,20 +23,19 @@
       </ul>
     </div>
   </div>
-  <h1> PHP Code </h1>
-  <p>Numbers given:
 
   <?php
    $post = array_values($_POST); //Turn the values from the form on the prior page into an array (in order received)
-   $paramCount = count($post) . " items received <br> "; 
+   $paramCount = count($post) . " items received <br> ";
    $x = 1; //Counter value
    echo "Topic: " . $post[0] /*This is the dropdown menu value*/ . "<br>";
    while ($x < $paramCount){
      echo "Variable " . $x . ": " . $post[$x] . "<br>";
+     if($post[$x] == '')
+	$post[$x] = "blank";
      $x++;
-   } //This while loop prints out all the values that were passed from the form
+   }
    ?>
-  <h1>C Code</h1>
   <?php
    $output = shell_exec("eqDB/eqDB $post[0] $post[1] $post[2] $post[3] $post[4]");
    echo $output;

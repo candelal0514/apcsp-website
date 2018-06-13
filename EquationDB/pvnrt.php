@@ -6,7 +6,7 @@
 <body>
   <div class="fullpageimage bg1">
     <div class="headline">
-     <p>No metaldetectors allowed!</p>
+     <p>Ideal Gas Equation</p>
     </div>
     <div class="header">
       <ul>
@@ -21,8 +21,7 @@
     </div>
   </div>
   <form action="./results.php" method="post">
-  Select an equation:
-  <select name="dropdown1">
+  <select hidden name="dropdown1">
   <option value ="idealgas">PV = nRT</option>
   </select><br>
   Submit P in atmospheres, V in Liters, n in moles, & T in Kelvins<br>

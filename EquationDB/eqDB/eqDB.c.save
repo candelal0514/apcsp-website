@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(int argc, char* argv[])
+{
+	int arg = 0;
+	while (arg < argc)
+	{
+		printf("Arg %d is %s <br>", arg, argv[arg]);
+		arg++;
+	}
+	if (strcmp(argv[1], "idealgas") == 0)
+	{
+		//Trying to solve for a PV = NRT equation
+		char solvefor[4] = {'p','v','n','t'};
+	}
+	else
+	{
+		printf("who the hekc knows what they want to solve");
+	}
+}

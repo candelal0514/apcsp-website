@@ -60,9 +60,56 @@ void pvnrt(const char solve,float var1,float var2,float var3){
 		printf("Did not choose a variable to solve for<br>");
 	}
 }
-void qmct(char q, char m, char c, char t)
+void qmct(char in1[], char in2[], char in3[], char in4[])
 {
-
+	int q;
+	int m;
+	int c;
+	int t;
+	float answer;
+	if (strcmp(in1,"blank")==0)
+	{	//q = mct
+		printf("Solving for q...<br>");
+		sscanf(in2,"%d",&m);
+		sscanf(in3,"%d",&c);
+		sscanf(in4,"%d",&t);
+		answer = m * c * t;
+		printf("The answer is %f Joules<br>",answer);
+	}
+	else if (strcmp(in2,"blank")==0)
+	{	//m = q/ct
+		printf("Solving for m...<br>");
+		sscanf(in1,"%d",&q);
+		sscanf(in3,"%d",&c);
+		sscanf(in4,"%d",&t);
+		printf("q = %d<br>",q);
+		printf("c = %d<br>",c);
+		printf("t = %d<br",t);
+		answer = q/(c*t);
+		printf("The answer is %f grams<br>",answer); 
+	}
+	else if(strcmp(in3,"blank")==0)
+	{	//c = q / (mt)
+		printf("Solving for c...<br>");
+		sscanf(in1,"%d",&q);
+		sscanf(in2,"%d",&m);
+		sscanf(in4,"%d",&t);
+		answer = q / (m * t);
+		printf("The answer is %f Joules per degree gram Celsius<br>",answer);
+	}
+	else if(strcmp(in4,"blank")==0)
+	{	//t = q/ mc
+		printf("Sovling for t..<br>");
+		sscanf(in1,"%d",&q);
+		sscanf(in2,"%d",&m);
+		sscanf(in3,"%d",&c);
+		answer = q / (m*c);
+		printf("The answer is %f degrees Celsius<br>",answer);
+	}
+	else
+	{
+		printf("Something went wrong");
+	}
 }
 int main(int argc, char* argv[])
 {
@@ -90,20 +137,17 @@ int main(int argc, char* argv[])
 
 	else if (strcmp(argv[1], "thermo") == 0)
 	{
-		printf("trying to solve for first thermodynamic law");
-		int q;
-		int m;
-		int c;
-		int t;
-		char solve;
-		printf(sscanf(argv[2],"%d"));
-		if (sscanf(argv[2],"%d") == 0)
-		{
-			sscanf(argv[2],"%c",&solve);
-			sscanf(argv[3],"%d",&m);
-			sscanf(argv[4],"%d",&c);
-			sscanf(argv[5],"%d",&t);
-		}
+		printf("trying to solve for first thermodynamic law<br>");
+		//char q[];
+		//char m;
+		//char c;
+		//char t;
+
+		//sscanf(argv[2],"%s",&q);
+		//sscanf(argv[3],"%s",&m);
+		//sscanf(argv[4],"%s",&c);
+		//sscanf(argv[5],"%s",&t);
+		qmct(argv[2], argv[3], argv[4], argv[5]);
 	}
 
 	else
